@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import { Form, Container, Row, Col } from "react-bootstrap"
+import { Form, Container, Row, Col, Button } from "react-bootstrap"
 
 const IndexPage = () => {
   return (
@@ -21,41 +21,59 @@ const IndexPage = () => {
           style={{ marginBottom: `1.45rem` }}
         />
 
-        <Form>
-          <Row>
-            <Col>
-              <Form.Group controlId="formBasicFirstName">
-                <Form.Label>Voornaam</Form.Label>
-                <Form.Control type="text" placeholder="Jan" />
+        <Row>
+          {/* Column voor de form */}
+          <Col lg={9}>
+            <Form>
+              <Row>
+                <Col>
+                  <Form.Group controlId="formBasicFirstName">
+                    <Form.Label>Voornaam</Form.Label>
+                    <Form.Control required type="text" placeholder="Jan" />
+                  </Form.Group>
+                </Col>
+
+                <Col>
+                  <Form.Group controlId="formBasicLastName">
+                    <Form.Label>Achternaam</Form.Label>
+                    <Form.Control required type="text" placeholder="Janssen" />
+                  </Form.Group>
+                </Col>
+              </Row>
+
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email Adress</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="JanJanssen@Jan.com"
+                />
               </Form.Group>
-            </Col>
 
-            <Col>
-              <Form.Group controlId="formBasicLastName">
-                <Form.Label>Achternaam</Form.Label>
-                <Form.Control type="text" placeholder="Janssen" />
+              <Form.Group controlId="formBasicPhoneNumber">
+                <Form.Label>Telefoonnummer (optioneel)</Form.Label>
+                <Form.Control type="text" placeholder="" />
               </Form.Group>
-            </Col>
-          </Row>
 
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email Adress</Form.Label>
-            <Form.Control type="text" placeholder="JanJanssen@Jan.com" />
-          </Form.Group>
+              <Form.Group controlId="formBasicDescription">
+                <Form.Label>Omschrijving van uw inlichting</Form.Label>
+                <Form.Control
+                  required
+                  as="textarea"
+                  rows="3"
+                  placeholder="Plaats hier wat u graag wilt vertellen"
+                />
+              </Form.Group>
+              <Button type="submit">Stuur contact formulier</Button>
+            </Form>
+          </Col>
 
-          <Form.Group controlId="formBasicPhoneNumber">
-            <Form.Label>Telefoonnummer (optioneel)</Form.Label>
-            <Form.Control type="text" placeholder="" />
-          </Form.Group>
-
-          <Form.Group controlId="formBasicDescription">
-            <Form.Label>Omschrijving van uw inlichting</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Plaats hier wat u graag wilt vertellen"
-            />
-          </Form.Group>
-        </Form>
+          {/* Column voor omschrijving van het form veld */}
+          <Col>
+            Voer uw contact informatie in en omschrijf wat uw graag wilt
+            vertellen, ik neem zo snel mogelijk contact op wanneer mogelijk is!
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )
