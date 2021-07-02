@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "react-bootstrap-forms",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Een oefen website om react-bootstrap componenten mee te oefenen",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Daniël Codes",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "gatsby": "^3.8.1",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-image": "^1.8.0",
@@ -16,6 +17,7 @@
     "gatsby-transformer-sharp": "^3.8.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"
   },
